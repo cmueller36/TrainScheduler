@@ -1,12 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Train Schedule</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+        crossorigin="anonymous">
+        
+
 </head>
+
 <body>
-    
+    <!--header-->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="jumbotron" style="background: #000">
+                    <h1 class="display-3 text-center" style="color: #fff">Train Time</h1>
+                    <p class="lead text-center" style="color: #fff">Calculate your train arrival time</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card" style="width: 100%;">
+                    <div class="card-body">
+                        <h2 class="card-title">Current Train Schedule</h2>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Train Name</th>
+                                    <th scope="col">Destination</th>
+                                    <th scope="col">Frequency (min)</th>
+                                    <th scope="col">Next Arrival</th>
+                                    <th scope="col">Minutes Away</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tablebody">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card" style="width: 100%;">
+                    <div class="card-body">
+                        <div class="form-group">
+                            <h3 class="card-title">Add Train</h3>
+                            <label for="newTrainName">Train Name</label>
+                            <input type="text" class="form-control" id="newTrainName" placeholder="Enter Train Name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="newDestination">Destination</label>
+                            <input type="text" class="form-control" id="newDestination" placeholder="New Destination">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="newTime">First Train Time</label>
+                            <input type="time"  class="form-control" id="newTime" placeholder="First Train Departing">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="newEmployeeRate">Frequency (min)</label>
+                            <input type="text" class="form-control" id="newFrequency" placeholder="Train Frequency">
+                        </div>
+
+                        <button id="submitButton" type="button" class="btn btn-danger">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 </body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+    crossorigin="anonymous"></script>
+
+<!-- Firebase -->
+<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+
+<!-- moment.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.1/moment.min.js"></script>
+
+<script src="javascript.js"></script>
+
+
 </html>
